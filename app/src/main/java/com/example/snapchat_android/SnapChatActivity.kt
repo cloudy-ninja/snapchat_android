@@ -1,12 +1,11 @@
 package com.example.snapchat_android
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
+import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.ktx.Firebase
 
 class SnapChatActivity : AppCompatActivity() {
     var mAuth = FirebaseAuth.getInstance()
@@ -24,10 +23,10 @@ class SnapChatActivity : AppCompatActivity() {
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        if(item?.itemId == R.id.createSnap) {
+        if (item?.itemId == R.id.createSnap) {
             var intent = Intent(this, CreateSanpActivity::class.java);
             startActivity(intent);
-        } else if(item?.itemId == R.id.logOut) {
+        } else if (item?.itemId == R.id.logOut) {
             mAuth.signOut();
             finish();
         }
