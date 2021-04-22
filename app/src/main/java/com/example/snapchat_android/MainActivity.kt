@@ -20,6 +20,7 @@ class MainActivity : AppCompatActivity() {
         // Check if user is signed in (non-null) and update UI accordingly.
         var currentUser = auth.currentUser;
         if (currentUser != null) {
+            login()
         }
     }
 
